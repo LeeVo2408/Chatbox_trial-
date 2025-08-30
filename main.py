@@ -5,6 +5,7 @@ import time
 
 from core.vector import retriever
 from components.sidebar import sidebar
+from Ui import stream_data
 
 def main():
 
@@ -40,7 +41,7 @@ def main():
             
         st.success('Response generated!')
         st.write("**Response:**")
-        st.write(response)
+        st.write(stream_data(response))
 
 
 
