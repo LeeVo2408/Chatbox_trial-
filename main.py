@@ -3,18 +3,13 @@ from langchain_core.prompts import ChatPromptTemplate;
 import streamlit as st
 import time 
 
-from AI_setup.vector import retriever
-from AI_setup.streamlit_setup import init_page, get_user_input
+from Core.vector import retriever
+from Core.streamlit_setup import init_page, get_user_input
 
 def main():
     #call the streamlit setup function to initialize the page
     init_page()
     
-        
-    if "messages" not in st.session_state:
-        st.session_state["messages"] = [
-            {"role": "assistant", "content": "How can I help with the pizza reviews?"}
-        ]
     
 
     model = OllamaLLM(model="llama3.2")  
